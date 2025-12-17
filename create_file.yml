@@ -10,3 +10,8 @@
         state: touch
         mode: '0644'
 
+    - name: Add content to the file
+      lineinfile:
+        path: /tmp/ansible_test.txt
+        line: "This file was created by Ansible on {{ inventory_hostname }}"
+        create: yes
