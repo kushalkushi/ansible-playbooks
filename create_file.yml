@@ -1,0 +1,12 @@
+---
+- name: Create a text file on client servers
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Create a file in /tmp
+      file:
+        path: /tmp/ansible_test.txt
+        state: touch
+        mode: '0644'
+
